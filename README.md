@@ -14,8 +14,9 @@ Learn the basics -- installing LEIP, setting up your system, interacting with LE
 
 Once you have the basics down, continue by using the Application Frameworks' recipes and the Compiler Frameworks' optimization components. 
 
-* [Getting started with recipes](/notebooks/GettingStarted.ipynb) -- Part One: Using Python, walk through the basics of optimizing and compiling your model for various targets. You'll use the Application Framework and Recipe Designer to explore, train, evaluate and export the model.
-
+* [Getting started with recipes](/notebooks/GettingStarted.ipynb) -- Walk through the basics of optimizing and compiling your model for various targets. You'll use the Application Framework and Recipe Designer to explore, train, evaluate and export the model; you'll then use the Compiler Framework to further optimize and evaluate your model. 
+* [Exploring the Golden Recipes](/notebooks/golden_recipe_tutorial.ipynb) -- Query, Explore and Selecting a Golden Recipe for you application and dataset.
+* [Executing Tasks](/notebooks/executing_recipe.ipynb) --  Visualize your data, train a model, evaluate it, visualize its predictions, and export your model.
 
 ## Integrating with LEIP
 
