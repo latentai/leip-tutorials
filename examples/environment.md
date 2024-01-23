@@ -1,4 +1,4 @@
-This section guides you through the process of setting up an environment that can concurrently access the [Application Framework](/af/latest/content/) and [Compiler Framework](/cf/latest/content/) using containers. To complete this procedure, please ensure that [Docker](https://docs.docker.com/engine/install/):octicons-link-external-16: is installed on your system.
+This section guides you through the process of setting up an environment that can concurrently access the [Application Framework](https://leipdocs.latentai.io/af/latest/content/) and [Compiler Framework](https://leipdocs.latentai.io/cf/latest/content/) using containers. To complete this procedure, please ensure that [Docker](https://docs.docker.com/engine/install/):octicons-link-external-16: is installed on your system.
 
 ## Required Credentials
 
@@ -6,7 +6,7 @@ First, configure the following environment variables as credentials: `LICENSE_KE
 
 
 !!! tip "If you don't have a repository access token"
-    Please refer to the topic ["How do I create a Personal Access Token?"](/home/content/help/#installing-leip) in the help section. 
+    Please refer to the topic ["How do I create a Personal Access Token?"](https://leipdocs.latentai.io/home/content/help/#installing-leip) in the help section. 
 
 Create a directory as a shared volume for your Docker container:
  
@@ -80,8 +80,3 @@ curl http://host.docker.internal:8888
 
 In this client container environment, you can use both `leip-recipe-designer` and `leip_client` APIs from Python. You can also run a Jupyter notebook accessing port 8889 on the host system.
 
-## Next Steps
-
-- From here you can check out [Getting Started with LEIP Recipes](/af/latest/notebooks/GettingStarted/).
-
-- After that you can optimize your model with [Optimize Your Recipe](../optimize_recipe/).
