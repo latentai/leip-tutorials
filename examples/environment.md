@@ -70,6 +70,9 @@ pip install --extra-index-url $LEIP_PYPI_URL leip-api
 pip install fiftyone
 pip install fiftyone-db-ubuntu2204
 
+# FIXME, this needs to be installed for now to avoid an issue in AF train
+pip install tensorboard
+
 # Install and run jupyter notebook
 pip install jupyter
 jupyter notebook --port 8889 --ip 0.0.0.0 --allow-root --no-browser &
