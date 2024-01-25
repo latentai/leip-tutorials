@@ -27,3 +27,7 @@ dist/
 
 site/
 secrets/
+artifacts/
+workspace/
+logs/
+downloaded_checkpoints/
