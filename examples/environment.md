@@ -5,13 +5,13 @@ This section guides you through the process of setting up an environment that ca
 First, configure the following environment variables as credentials: `LICENSE_KEY`, `REPOSITORY_TOKEN_NAME`, and `REPOSITORY_TOKEN_PASS`.
 
 
-!!! tip "If you don't have a repository access token"
+!!! tip "If you do not have a repository access token"
     Please refer to the topic ["How do I create a Personal Access Token?"](https://leipdocs.latentai.io/home/content/help/#installing-leip) in the help section. 
 
 Create a directory as a shared volume for your Docker container:
  
 ```bash
-mkdir recipe_test
+mkdir ~/recipe_test
 ```
 
 This allows seamless file exchange between the Docker container and your host system. `The RECIPE_TEST_PATH` variable represents this directory
@@ -21,7 +21,7 @@ export LICENSE_KEY=[your license key]
 export RECIPE_TEST_PATH=/home/username/recipe_test
 ```
 
-If you haven't already pulled the containers, login to the docker registry using your Personal Access Token
+If you have not already pulled the containers, log in to the docker registry using your Personal Access Token.
 
 ```bash
 docker login repository.latentai.com
@@ -51,7 +51,7 @@ docker run -e=LICENSE_KEY --name=recipe_test \
        -v=$RECIPE_TEST_PATH:/recipe_test python:3.8 bash
 ```
 !!! tip
-    If you exit the container and want to reattach to it, use `docker start recipe_test; docker attach recipe_test `
+    If you exit the container and want to reattach to it, use `docker start recipe_test; docker attach recipe_test `.
 
 
 Once you are inside the container run the following:
