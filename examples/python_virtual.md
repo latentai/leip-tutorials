@@ -1,6 +1,6 @@
 ## Setting Up LEIP using a Python Virtual Environment
 
-These instructions will guide you through installing LEIP using a single docker container. In this environment, the [Compiler Framework](https://leipdocs.latentai.io/cf/latest/content/) (CF) will be launched as a server container. The [Application Framework](https://leipdocs.latentai.io/af/latest/content/) (AF) and a Juypter server are installed outside of a container in a Python virtual environment. A Python virtual environment will ensure that the dependencies required by AF are met and do not conflict with other Python packages you have installed on your system.  We will sometimes refer to the CF container as a server container, because it contains a server API that enables calls to be made from outside of the container.
+These instructions will guide you through installing LEIP using a single docker container. In this environment, the [Compiler Framework](https://leipdocs.latentai.io/cf/latest/content/) (CF) will be launched as a server container. The [Application Framework](https://leipdocs.latentai.io/af/latest/content/) (AF) and a Juypter server are installed outside of a container in a Python virtual environment. A Python virtual environment will ensure that the dependencies required by AF are met and do not conflict with other Python packages you have installed on your system.  We will sometimes refer to the CF container as a server container because it contains a server API that enables calls to be made from outside of the container.
 
 ## Required Credentials
 
@@ -19,7 +19,7 @@ This allows a seamless file exchange between the Docker container and your host 
 
 ```bash
 export LICENSE_KEY=[your license key]
-export RECIPE_TEST_PATH=/home/username/recipe_test
+export RECIPE_TEST_PATH=~/recipe_test
 ```
 
 If you have not already pulled the containers, log in to the Docker registry using your Personal Access Token.
