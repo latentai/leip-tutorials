@@ -1,6 +1,6 @@
 ## Setting Up LEIP by Installing and Using a Client Docker Container
 
-These instructions will guide you through installing LEIP as two separate docker containers. In this environment, we will refer to the [Compiler Framework](https://leipdocs.latentai.io/cf/latest/content/) (CF) as the server container and the [Application Framework](https://leipdocs.latentai.io/af/latest/content/) (AF) container as the client container, as we will use client APIs in the AF container to issue commands to the CF container.  Note, however, that the Juypter server will be installed alongside AF in the Client container. This section guides you through the process of setting up both the AF and CF containers.
+These instructions will guide you through installing LEIP as two separate docker containers. In this environment, we will refer to the [Compiler Framework](https://leipdocs.latentai.io/cf/latest/content/) (CF) as the server container and the [Application Framework](https://leipdocs.latentai.io/af/latest/content/) (AF) container as the client container, as we will use client APIs in the AF container to issue commands to the CF container. Note however, that the Juypter server will be installed alongside AF in the Client container. This section guides you through the process of setting up both the AF and CF containers.
 
 ## Required Credentials
 
