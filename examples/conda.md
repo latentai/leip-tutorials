@@ -52,7 +52,7 @@ Now we will set up the Application Framework and Recipe Designer. Conda environm
 
 If you are not already a user of Conda environments, you can follow these [instructions](https://docs.anaconda.com/free/miniconda/miniconda-install/) to get a minimal install. We also provide instructions on how to set up on a Python Virtual Environment or on a Docker "client" container. 
 
-Begin by making sure conda (or miniconda) are isntalled in your environment:
+Begin by making sure Conda (or miniconda) are installed in your environment:
 
 ```bash
 conda list 
