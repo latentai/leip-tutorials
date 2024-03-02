@@ -65,10 +65,6 @@ pip install --extra-index-url $LEIP_PYPI_URL leip-af
 pip install --extra-index-url $LEIP_PYPI_URL leip-recipe-designer-api
 pip install --extra-index-url $LEIP_PYPI_URL leip-api
 
-# In 3.0, tensor board is configured by default,
-# so it will need to be installed:
-pip install tensorboard
-
 # Install and run jupyter notebook
 pip install jupyter
 jupyter notebook --port 8889 --ip 0.0.0.0 --allow-root --no-browser &

@@ -82,13 +82,6 @@ pip install --extra-index-url $LEIP_PYPI_URL leip-af
 pip install --extra-index-url $LEIP_PYPI_URL leip-recipe-designer-api
 pip install --extra-index-url $LEIP_PYPI_URL leip-api
 ```
-The following steps are required if LEIP 3.0.0 is being used on Ubuntu 22.04: 
-
-```bash
-# In 3.0, tensor board is configured by default,
-# so it will need to be installed:
-pip install tensorboard
-```
 
 ## Install and Run a Jupyter Notebook
 
