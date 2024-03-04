@@ -7,10 +7,3 @@ To use the full LEIP, you will need to install the [Application Framework](https
 * [Installing LEIP using AF in a Conda virtual environment](./conda.md)
 
 Please ensure that [Docker](https://docs.docker.com/engine/install/) is installed on your system prior to attempting to install Application Frameworks using either methods.  We recommend you run on a machine equipped with an NVIDIA GPU. To access the GPU from the LEIP containers, you will also need to install the [nvidia-container-toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
-
-
-
-
-
-
-

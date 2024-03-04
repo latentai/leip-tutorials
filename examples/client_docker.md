@@ -6,10 +6,10 @@ These instructions will guide you through installing LEIP as two separate docker
 
 Begin by configuring the following environment variables as credentials: `LICENSE_KEY`, `REPOSITORY_TOKEN_NAME`, and `REPOSITORY_TOKEN_PASS`.
 
-If you do not have a repository access token, please refer to the topic ["How do I create a Personal Access Token?"](https://leipdocs.latentai.io/home/content/help/#installing-leip) in the Help section. 
+If you do not have a repository access token, please refer to the topic ["How do I create a Personal Access Token?"](https://leipdocs.latentai.io/home/content/help/#installing-leip) in the Help section.
 
 Create a directory as a shared volume for your Docker container:
- 
+
 ```bash
 mkdir ~/recipe_test
 ```
@@ -60,20 +60,20 @@ export REPOSITORY_TOKEN_PASS=[your token secret here]
 export PYPI_REPOSITORY_HOST=repository.latentai.com
 export PYPI_REPOSITORY_PATH=/repository/pypi
 export LEIP_PYPI_URL=https://${REPOSITORY_TOKEN_NAME}:${REPOSITORY_TOKEN_PASS}@${PYPI_REPOSITORY_HOST}${PYPI_REPOSITORY_PATH}/simple
+
 pip install --upgrade pip
-pip install --extra-index-url $LEIP_PYPI_URL leip-af
-pip install --extra-index-url $LEIP_PYPI_URL leip-recipe-designer-api
-pip install --extra-index-url $LEIP_PYPI_URL leip-api
+pip install --extra-index-url $LEIP_PYPI_URL leip-api leip-recipe-designer-api[af]==1.1.0
 
 # Install and run jupyter notebook
 pip install jupyter
 jupyter notebook --port 8889 --ip 0.0.0.0 --allow-root --no-browser &
 
-# test that you can access the server container via HTTP, 
+# test that you can access the server container via HTTP,
 # should return {"detail":"Not Found"}
 curl http://localhost:8888
 ```
 
-In this client container environment, you can use both `leip-recipe-designer` and `leip_client` APIs from Python. You can also run a Jupyter Notebook on your host system by accessing [http://127.0.0.1:8889](http://127.0.0.1:8889).
+In this client container environment, you can use both `leip-recipe-designer` and `leip_client` APIs from Python. You can also run a Jupyter Notebook on your host system by accessing [http://127.0.0.1:8889](http://127.0.0.1:8889). In the example above, we are installing LEIP Recipe Designer with the `af` execution  context (via `leip-af`). You can replace this with the name of the execution context which applies to you.
 
-  
+
+

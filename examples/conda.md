@@ -7,10 +7,10 @@ These instructions will guide you through installing LEIP using a single docker 
 Begin by configuring the following environment variables as credentials: `LICENSE_KEY`, `REPOSITORY_TOKEN_NAME`, and `REPOSITORY_TOKEN_PASS`.
 
 
-If you do not have a repository access token, please refer to the topic ["How do I create a Personal Access Token?"](https://leipdocs.latentai.io/home/content/help/#installing-leip) in the Help section. 
+If you do not have a repository access token, please refer to the topic ["How do I create a Personal Access Token?"](https://leipdocs.latentai.io/home/content/help/#installing-leip) in the Help section.
 
 Create a directory as a shared volume for your Docker container:
- 
+
 ```bash
 mkdir ~/recipe_test
 ```
@@ -41,8 +41,8 @@ docker run -d -e=LICENSE_KEY \
        -v=$RECIPE_TEST_PATH:/recipe_test \
        --name=leip_server \
        repository.latentai.com/leip-cf:latest-gpu-cuda leip-server run
-       
-# Test the Compiler Framework docker container via HTTP, 
+
+# Test the Compiler Framework docker container via HTTP,
 # should return {"detail":"Not Found"}
 curl http://localhost:8888
 ```
@@ -50,12 +50,12 @@ curl http://localhost:8888
 
 Now we will set up the Application Framework and Recipe Designer. Conda environments will be used to ensure the correct dependencies and to prevent dependency mismatches.
 
-If you are not already a user of Conda environments, you can follow these [instructions](https://docs.anaconda.com/free/miniconda/miniconda-install/) to get a minimal install. We also provide instructions on how to set up on a Python Virtual Environment or on a Docker "client" container. 
+If you are not already a user of Conda environments, you can follow these [instructions](https://docs.anaconda.com/free/miniconda/miniconda-install/) to get a minimal install. We also provide instructions on how to set up on a Python Virtual Environment or on a Docker "client" container.
 
 Begin by making sure Conda (or miniconda) are installed in your environment:
 
 ```bash
-conda list 
+conda list
 ```
 
 Next, create a Conda environment and activate it:
@@ -77,10 +77,7 @@ export LEIP_PYPI_URL=https://${REPOSITORY_TOKEN_NAME}:${REPOSITORY_TOKEN_PASS}@$
 
 # Now install the necessary packages:
 pip install --upgrade pip
-pip install -U pip wheel setuptools
-pip install --extra-index-url $LEIP_PYPI_URL leip-af
-pip install --extra-index-url $LEIP_PYPI_URL leip-recipe-designer-api
-pip install --extra-index-url $LEIP_PYPI_URL leip-api
+pip install --extra-index-url $LEIP_PYPI_URL leip-api leip-recipe-designer-api[af]==1.1.0
 ```
 
 ## Install and Run a Jupyter Notebook
@@ -98,4 +95,4 @@ Now verify that there are no conflicts:
 pip check
 ```
 
-You can use both `leip-recipe-designer` and `leip_client` APIs from the Python virtual environment. Remember to activate `AF3` when you want to use these APIs. You can also run a Jupyter Notebook on your host system by accessing [http://127.0.0.1:8889](http://127.0.0.1:8889)
+You can use both `leip-recipe-designer` and `leip_client` APIs from the Python virtual environment. Remember to activate `AF3` when you want to use these APIs. You can also run a Jupyter Notebook on your host system by accessing [http://127.0.0.1:8889](http://127.0.0.1:8889). In the example above, we are installing LEIP Recipe Designer with the `af` execution  context (via `leip-af`). You can replace this with the name of the execution context which applies to you.
