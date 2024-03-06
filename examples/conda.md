@@ -19,7 +19,7 @@ This allows a seamless file exchange between the Docker container and your host 
 
 ```bash
 export LICENSE_KEY=[your license key]
-export RECIPE_TEST_PATH=/home/<username>/recipe_test
+export RECIPE_TEST_PATH=~/recipe_test
 ```
 
 If you have not already pulled the containers, log in to the Docker registry using your Personal Access Token.

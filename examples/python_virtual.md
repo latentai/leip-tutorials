@@ -59,14 +59,14 @@ sudo apt install python3.8 python3.8-dev python3.8-venv
 Next, create a Python virtual environment and activate it:
 
 ```bash
-# For this example we'll choose the name af3 for our application 
+# For this example we'll choose the name af for our application 
 # frameworks virtual environment.  We'll put it in our home directory:
-mkdir ~/af3
-cd ~/af3
-python3.8 -m venv af3
+mkdir ~/af
+cd ~/af
+python3.8 -m venv af
 
 # Activate the virtual environment:
-source af3/bin/activate
+source af/bin/activate
 
 # Set up your credentials:
 export REPOSITORY_TOKEN_NAME=[your token name here]
