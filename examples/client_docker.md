@@ -62,7 +62,7 @@ export PYPI_REPOSITORY_PATH=/repository/pypi
 export LEIP_PYPI_URL=https://${REPOSITORY_TOKEN_NAME}:${REPOSITORY_TOKEN_PASS}@${PYPI_REPOSITORY_HOST}${PYPI_REPOSITORY_PATH}/simple
 
 pip install --upgrade pip
-pip install --extra-index-url $LEIP_PYPI_URL leip-api leip-recipe-designer-api[af]==1.1.0
+pip install --extra-index-url $LEIP_PYPI_URL leip-api leip-af leip-recipe-designer-api
 
 # Install and run jupyter notebook
 pip install jupyter
