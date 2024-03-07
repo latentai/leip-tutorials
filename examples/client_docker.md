@@ -70,7 +70,7 @@ jupyter notebook --port 8889 --ip 0.0.0.0 --allow-root --no-browser &
 
 # test that you can access the server container via HTTP,
 # should return {"detail":"Not Found"}
-curl http://localhost:8888
+curl http://host.docker.internal:8888
 ```
 
 In this client container environment, you can use both `leip-recipe-designer` and `leip_client` APIs from Python. You can also run a Jupyter Notebook on your host system by accessing [http://127.0.0.1:8889](http://127.0.0.1:8889). In the example above, we are installing LEIP Recipe Designer with the `af` execution  context (via `leip-af`). You can replace this with the name of the execution context which applies to you.
