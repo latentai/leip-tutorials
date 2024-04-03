@@ -1,0 +1,41 @@
+volumes:
+  leip-workspace:
+
+services:
+  leip-cf:
+    container_name: leip-cf
+    image: ${LEIP_CF_IMAGE:-repository.latentai.com/leip-cf}:${LEIP_CF_VERSION:-latest-gpu-cuda}
+    pull_policy: always
+    working_dir: /recipe_test
+    volumes:
+      - ${LEIP_WORKSPACE:-leip-workspace}:/recipe_test
+    ports:
+      - 8080:8888
+    environment:
+      LICENSE_KEY:
+      LEIP_WORKSPACE: /recipe_test
+
+  leip-af:
+    container_name: leip-af
+    image: ${LEIP_AF_IMAGE:-repository.latentai.com/leip-af}:${LEIP_AF_VERSION:-latest}
+    pull_policy: always
+    working_dir: /recipe_test
+    volumes:
+      - ${LEIP_WORKSPACE:-leip-workspace}:/recipe_test
+      - ../notebooks:/recipe_test/notebooks
+    ports:
+      - 8888:8888
+    environment:
+      LICENSE_KEY:
+      JUPYTER_TOKEN:
+      LEIP_WORKSPACE: /recipe_test
+    ipc: host
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: >
+      jupyter notebook
+        --port 8888
+        --ip 0.0.0.0
+        --allow-root
+        --no-browser
+        --NotebookApp.token="${JUPYTER_TOKEN:-leip}"

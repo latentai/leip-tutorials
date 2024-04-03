@@ -7,10 +7,10 @@ These instructions will guide you through installing LEIP using a single docker 
 Begin by configuring the following environment variables as credentials: `LICENSE_KEY`, `REPOSITORY_TOKEN_NAME`, and `REPOSITORY_TOKEN_PASS`.
 
 
-If you do not have a repository access token, please refer to the topic ["How do I create a Personal Access Token?"](https://leipdocs.latentai.io/home/content/help/#installing-leip) in the Help section. 
+If you do not have a repository access token, please refer to the topic ["How do I create a Personal Access Token?"](https://leipdocs.latentai.io/home/content/help/#installing-leip) in the Help section.
 
 Create a directory as a shared volume for your Docker container:
- 
+
 ```bash
 mkdir ~/recipe_test
 ```
@@ -41,8 +41,8 @@ docker run -d -e=LICENSE_KEY \
        -v=$RECIPE_TEST_PATH:/recipe_test \
        --name=leip_server \
        repository.latentai.com/leip-cf:latest-gpu-cuda leip-server run
-       
-# Test the Compiler Framework docker container via HTTP, 
+
+# Test the Compiler Framework docker container via HTTP,
 # should return {"detail":"Not Found"}
 curl http://localhost:8888
 ```
@@ -50,7 +50,7 @@ curl http://localhost:8888
 
 Now we will set up the Application Framework and Recipe Designer. Python virtual environments will be used to ensure the correct dependencies and to prevent dependency mismatches.
 
-Begin by installing Python 3.8 and Python `venv` support: 
+Begin by installing Python 3.8 and Python `venv` support:
 
 ```bash
 sudo apt install python3.8 python3.8-dev python3.8-venv
@@ -59,7 +59,7 @@ sudo apt install python3.8 python3.8-dev python3.8-venv
 Next, create a Python virtual environment and activate it:
 
 ```bash
-# For this example we'll choose the name af for our application 
+# For this example we'll choose the name af for our application
 # frameworks virtual environment.  We'll put it in our home directory:
 mkdir ~/af
 cd ~/af

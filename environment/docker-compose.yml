@@ -1,0 +1,28 @@
+volumes:
+  leip-workspace:
+
+services:
+  leip-cf:
+    extends:
+      file: docker-compose.cpu.yml
+      service: leip-cf
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities:
+                - gpu
+              driver: nvidia
+              count: all
+  leip-af:
+    extends:
+      file: docker-compose.cpu.yml
+      service: leip-af
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities:
+                - gpu
+              driver: nvidia
+              count: all
