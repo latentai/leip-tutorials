@@ -34,5 +34,4 @@ If you need to attach to your running compose container, you can do so:
 $ docker exec -it leip-cf bash
 ```
 
-From here you can run any Python code or programs you need, or install any required Python packages. By default you will be placed inside your configured workspace directory (via `$LEIP_WORKSPACE`).
-
+From here you can run any Python code or programs you need, or install any required Python packages. By default, you will be placed inside your configured workspace directory (via `$LEIP_WORKSPACE`).

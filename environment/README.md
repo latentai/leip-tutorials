@@ -7,8 +7,8 @@ To use the full LEIP platform, you will need to install the [Application Framewo
 In order to use any of the LEIP tooling effectively, you must designate both a LEIP License Key and a workspace. This can be done by setting the `LICENSE_KEY` and `LEIP_WORKSPACE` environment variables in your shell session:
 
 ```bash
-$ export LICENSE_KEY=key/<license_key>
-$ export LEIP_WORKSPACE=/path/to/your/workspace
+export LICENSE_KEY=key/<license_key>
+export LEIP_WORKSPACE=/path/to/your/workspace
 ```
 
 These values will be used inside notebooks and throughout examples in order to write to the correct locations. If you are planning on using more than one LEIP tool in combination with another, please ensure these values match across your shell environments.

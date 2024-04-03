@@ -1,10 +1,10 @@
 # Installing LEIP AF Python Packages
 
-This guide will cover installing `leip-af` and `leip-recipe-designer-api` Python packages from the Latent AI PyPI Repository, which are need to use LEIP AF.
+This guide will cover installing `leip-af` and `leip-recipe-designer-api` Python packages from the Latent AI PyPI Repository, which are needed to use LEIP AF.
 
 ## Required Credentials
 
-In order to communicate with the LatentAI PyPI Repository, you will need an access key pair. If you do not have a repository access token, please refer to the topic ["How do I create a Personal Access Token?"](https://leipdocs.latentai.io/home/content/help/#installing-leip) in the Help section. Once you have your personal token, place it inside your shell session so it can be referred to by further instructions:
+In order to communicate with the Latent AI PyPI Repository, you will need an access key pair. If you do not have a repository access token, please refer to the topic ["How do I create a Personal Access Token?"](https://leipdocs.latentai.io/home/content/help/#installing-leip) in the Help section. Once you have your personal token, place it inside your shell session so it can be referred to by further instructions:
 
 ```bash
 $ REPOSITORY_TOKEN_NAME=<token_name>
