@@ -17,7 +17,7 @@ services:
     restart: always
     healthcheck:
       test: ["CMD-SHELL", "curl http://localhost:8080/v1/metadata"]
-      interval: 5s
+      interval: 15s
       timeout: 5s
       retries: 5
 
@@ -40,8 +40,8 @@ services:
       LEIP_WORKSPACE: /recipe_test
     restart: always
     healthcheck:
-      test: ["CMD-SHELL", "curl -L http://localhost:8888"]
-      interval: 5s
+      test: ["CMD-SHELL", "curl -L http://localhost:8888/api"]
+      interval: 15s
       timeout: 5s
       retries: 5
     command: >
