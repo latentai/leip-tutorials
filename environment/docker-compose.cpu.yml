@@ -17,7 +17,7 @@ services:
     restart: always
     healthcheck:
       test: ["CMD-SHELL", "curl http://localhost:8080/v1/metadata"]
-      interval: 15s
+      interval: 5s
       timeout: 5s
       retries: 5
 
@@ -41,7 +41,7 @@ services:
     restart: always
     healthcheck:
       test: ["CMD-SHELL", "curl -L http://localhost:8888/api"]
-      interval: 15s
+      interval: 5s
       timeout: 5s
       retries: 5
     command: >
