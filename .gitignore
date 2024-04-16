@@ -31,3 +31,4 @@ artifacts/
 workspace/
 logs/
 downloaded_checkpoints/
+notebooks/.ipynb_checkpoints
