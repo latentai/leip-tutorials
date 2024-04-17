@@ -1,4 +1,3 @@
-
 networks:
   default:
     name: leip-network

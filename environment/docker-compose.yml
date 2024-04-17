@@ -1,3 +1,7 @@
+networks:
+  default:
+    name: leip-network
+
 volumes:
   leip-workspace:
 
