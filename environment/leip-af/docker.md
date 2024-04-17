@@ -42,3 +42,12 @@ Or
 ```bash
 docker exec -it leip-cf bash
 ```
+
+## Troubleshooting
+
+Error:
+```
+$ docker compose up leip-af leip-cf
+service "leip-af" can't be used with `extends` as it declare `depends_on`
+```
+This is a known docker compose [issue](https://github.com/docker/compose/issues/11544) introduced in docker-compose v2.24.6 and fixed in a later version. Please upgrade your docker compose version. If installed via `apt-get`, run `sudo apt-get install --only-upgrade docker-compose-plugin`

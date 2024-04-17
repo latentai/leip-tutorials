@@ -32,3 +32,12 @@ docker exec -it leip-cf bash
 ```
 
 From here you can run any Python code or programs you need, or install any required Python packages. By default, you will be placed inside your configured workspace directory (via `$LEIP_WORKSPACE`).
+
+## Troubleshooting
+
+Error:
+```
+$ docker compose up leip-cf
+service "leip-cf" can't be used with `extends` as it declare `depends_on`
+```
+This is a known docker compose [issue](https://github.com/docker/compose/issues/11544) introduced in docker-compose v2.24.6 and fixed in a later version. Please upgrade your docker compose version. If installed via `apt-get`, run `sudo apt-get install --only-upgrade docker-compose-plugin`
