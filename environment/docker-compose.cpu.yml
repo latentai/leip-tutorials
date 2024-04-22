@@ -21,7 +21,7 @@ services:
       LEIP_WORKSPACE: /recipe_test
     healthcheck:
       test: ["CMD-SHELL", "curl http://localhost:8888/v1/metadata"]
-      interval: 15s
+      interval: 5s
       timeout: 5s
       retries: 5
 
@@ -43,7 +43,7 @@ services:
       LEIP_CF_HOST: http://leip-cf:8888
     healthcheck:
       test: ["CMD-SHELL", "curl -L http://localhost:8888/api"]
-      interval: 15s
+      interval: 5s
       timeout: 5s
       retries: 5
     depends_on:
