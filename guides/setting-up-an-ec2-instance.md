@@ -25,35 +25,35 @@ as a guide for filling out this form:
 
 1. You can name the instance whatever you want
 2. Under "Application and OS Images" we recommend to use a Quick Start AMI
-    a. Select "Ubuntu" in the Quick Start menu
-    b. Expand the dropdown and search for "Deep Learning Base OSS Nvidia"
-    c. There should be a single result, so select this as your base image
-    d. Please see the [release notes](https://aws.amazon.com/releasenotes/aws-deep-learning-base-gpu-ami-ubuntu-20-04/)
-       for the list of supported instance types
+    * Select "Ubuntu" in the Quick Start menu
+    * Expand the dropdown and search for "Deep Learning Base OSS Nvidia"
+    * There should be a single result, so select this as your base image
+    * Please see the [release notes](https://aws.amazon.com/releasenotes/aws-deep-learning-base-gpu-ami-ubuntu-20-04/)
+      for the list of supported instance types
 3. Under "Instance Type" you can select your instance type and size
-    a. If you don't have specific requirements, you should select the
-       `g4dn.xlarge` instance type.
-    b. If picking your own instance type, please make sure it's supported
-       by checking the notes in `2d`.
+    * If you don't have specific requirements, you should select the
+      `g4dn.xlarge` instance type.
+    * If picking your own instance type, please make sure it's supported
+      by checking the notes in `2d`.
 4. Under "Key Pair" you can select/create a key pair for your instance
-    a. Although you can skip this step, it is highly recommended to secure
-       access to your instance by assigning a key pair.
-    b. This may not be a concern if you only allow SSH from specific IPs.
+    * Although you can skip this step, it is highly recommended to secure
+      access to your instance by assigning a key pair.
+    * This may not be a concern if you only allow SSH from specific IPs.
 5. Under "Network Settings", make sure to click "Edit" to open the advanced
    configuration settings.
-    a. Make sure that "Auto-assign public IP" is set to "Enable"
-    b. Create a new security group named "leip-sg"
-    c. There are several recommended rules to add to this group:
-        i. Allow `SSH` on port `22` from either your IP or anywhere (if using a
-           key pair).
-        ii. Allow `Custom TCP` on port `8888` if you wish to access Jupyter and
-            use Jupyter notebooks directly from your workstation
-        iii. Allow `Custom TCP` on port `8080` if you wish to access LEIP CF via
-             the LEIP Server from your workstation
+    * Make sure that "Auto-assign public IP" is set to "Enable"
+    * Create a new security group named "leip-sg"
+    * There are several recommended rules to add to this group:
+        * Allow `SSH` on port `22` from either your IP or anywhere (if using a
+          key pair).
+        * Allow `Custom TCP` on port `8888` if you wish to access Jupyter and
+          use Jupyter notebooks directly from your workstation
+        * Allow `Custom TCP` on port `8080` if you wish to access LEIP CF via
+          the LEIP Server from your workstation
 6. Under "Configure Storage" choose your volume size
-    a. We recommend starting with at least `256gb` on a `gp3` volume
-    b. If you anticipate you'll need more, feel free to raise this higher now to
-       save yourself the trouble of having to scale up later
+    * We recommend starting with at least `256gb` on a `gp3` volume
+    * If you anticipate you'll need more, feel free to raise this higher now to
+      save yourself the trouble of having to scale up later
 
 This may seem like a lot of steps, but it should only take you a couple of minutes
 to run through the form before clicking "Launch Instance". You should be taken to
