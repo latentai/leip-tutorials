@@ -28,5 +28,4 @@ Learn how to integrate the LEIP frameworks with other MLOps frameworks and servi
 ***
 
 [Developer Resources](https://docs.latentai.io) |
-[LEIP Recipes](https://docs.latentai.io/leip-recipes/) |
-[Request a Demo](https://latentai.com/contact-us/)
+[Request a Demo](https://latentai.com/get-started/)
