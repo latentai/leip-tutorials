@@ -1,4 +1,4 @@
-<img src=https://latentai.com/wp-content/uploads/2022/10/logo.svg width=300/><br />
+<img src=https://latentai.com/wp-content/uploads/2024/12/logo.png width=300/><br />
 
 # LEIP Tutorials and Examples
 
